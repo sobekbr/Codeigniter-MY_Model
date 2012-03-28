@@ -5,11 +5,11 @@
  *
  * Basic data access functionality for CodeIgniter projects
  *
- * @package        	CodeIgniter
- * @subpackage    	Core
- * @category    	Core
- * @author        	Udi Mosayev
- * @license         MIT License
+ * @package 		CodeIgniter
+ * @subpackage		Core
+ * @category 		Core
+ * @author 			Udi Mosayev
+ * @license 		MIT License
  * @link			http://udiudi.com
  */
 
