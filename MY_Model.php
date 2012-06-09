@@ -23,7 +23,7 @@ class MY_Model extends CI_Model {
 		parent::__construct();
 
 		$this->_table = "";
-		$this->_index = "";
+		$this->_index = "id"; // default value
 	}
 
 
@@ -51,7 +51,9 @@ class MY_Model extends CI_Model {
 		$data['updated_at'] = now_datetime();
 		$data['created_at'] = now_datetime();
 
-		$id = $this->db->insert($this->_table, $data);
+		$this->db->insert($this->_table, $data);
+
+		$id = $this->db->insert_id();
 
 		return $id;
 	}
