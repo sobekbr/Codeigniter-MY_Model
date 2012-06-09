@@ -52,10 +52,7 @@ class MY_Model extends CI_Model {
 		$data['created_at'] = now_datetime();
 
 		$this->db->insert($this->_table, $data);
-
-		$id = $this->db->insert_id();
-
-		return $id;
+		return $this->db->insert_id();
 	}
 
 
