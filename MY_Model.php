@@ -48,8 +48,8 @@ class MY_Model extends CI_Model {
 			return false;
 		}
 
-		$data['updated_at'] = now_datetime();
-		$data['created_at'] = now_datetime();
+		$data['updated_at'] = $this->_now();
+		$data['created_at'] = $this->_now();
 
 		$this->db->insert($this->_table, $data);
 		return $this->db->insert_id();
@@ -89,7 +89,7 @@ class MY_Model extends CI_Model {
 
 		if(!is_null($where))
 		{
-			$data['updated_at'] = now_datetime();
+			$data['updated_at'] = $this->_now();
 			$this->db->where($where);
 			$this->db->update($this->_table, $data);
 		}
@@ -203,6 +203,13 @@ class MY_Model extends CI_Model {
 		{
 			return $query;
 		}
+	}
+
+
+	private function _now()
+	{
+		$d = new Datetime();
+		return $d->format('Y-m-d H:i:s');
 	}
 
 }
