@@ -10,20 +10,19 @@
  * @category 		Core
  * @author 			Udi Mosayev
  * @license 		MIT License
- * @link			http://udiudi.com
  */
 
 class MY_Model extends CI_Model {
 
 	private $_table;
-	private $_index; // usually 'id'
+	private $_index;
 
 	public function __construct()
 	{
 		parent::__construct();
 
 		$this->_table = "";
-		$this->_index = "id"; // default value
+		$this->_index = "id";
 	}
 
 
